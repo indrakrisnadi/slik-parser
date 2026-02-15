@@ -131,29 +131,24 @@ def parse_slik(text):
 # ==============================
 # UPLOAD ENDPOINT
 # ==============================
+from fastapi.responses import StreamingResponse
+from openpyxl import Workbook
+from io import BytesIO
+
 @app.post("/upload/")
 async def upload_file(file: UploadFile = File(...)):
 
-    file_location = f"temp_{file.filename}"
-
-    with open(file_location, "wb") as buffer:
-        shutil.copyfileobj(file.file, buffer)
+    contents = await file.read()
 
     full_text = ""
-
-    with pdfplumber.open(file_location) as pdf:
+    with pdfplumber.open(BytesIO(contents)) as pdf:
         for page in pdf.pages:
             text = page.extract_text()
             if text:
                 full_text += "\n" + text
 
-    os.remove(file_location)
-
     parsed_data = parse_slik(full_text)
 
-    # ==========================
-    # CREATE EXCEL
-    # ==========================
     wb = Workbook()
     ws = wb.active
     ws.title = "SLIK Result"
@@ -189,11 +184,14 @@ async def upload_file(file: UploadFile = File(...)):
             item["Suku Bunga"]
         ])
 
-    output_file = "hasil_slik.xlsx"
-    wb.save(output_file)
+    excel_stream = BytesIO()
+    wb.save(excel_stream)
+    excel_stream.seek(0)
 
-    return FileResponse(
-        path=output_file,
-        filename="hasil_slik.xlsx",
-        media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    return StreamingResponse(
+        excel_stream,
+        media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        headers={
+            "Content-Disposition": "attachment; filename=hasil_slik.xlsx"
+        }
     )
