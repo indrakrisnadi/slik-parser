@@ -1,1 +1,4 @@
-
+fastapi
+uvicorn
+pdfplumber
+openpyxl
