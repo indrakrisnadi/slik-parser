@@ -1,0 +1,557 @@
+Informasi Debitur
+Sistem Layanan Informasi Keuangan
+Informasi ini bersifat RAHASIA dan hanya digunakan untuk kepentingan pemohon informasi. RAHASIA
+Akibat yang timbul dari penggunaan informasi ini bukan merupakan tanggung jawab Otoritas Jasa Keuangan.
+Kode Ref. Pengguna
+Informasi diberikan berdasarkan laporan yang dikirimkan oleh pelapor ke dalam Sistem Layanan Informasi
+LC2023060833_1
+Keuangan dengan kata kunci pencarian sebagai berikut:
+Nomor Laporan
+Nama Jenis Kelamin 41279/IDEB/0101523/2023
+JUNUS FATAH LAKI-LAKI Posisi Data Terakhir
+08 Juni 2023 10.48.09
+No. Identitas NPWP Tempat Lahir Tanggal Lahir
+Tanggal Permintaan
+22 Agustus 1960
+9 Juni 2023 10:48:09
+Data Pokok Debitur
+Penyajian informasi debitur pada Sistem Layanan Informasi Keuangan dikelompokkan berdasarkan nomor identitas debitur. Pengguna informasi diharapkan
+dapat meneliti kembali kemungkinan adanya debitur berbeda yang dilaporkan menggunakan nomor identitas yang sama
+Nama Sesuai Identitas Identitas Jenis Kelamin / NPWP Tempat / Tgl Lahir Pelapor / Tanggal Update
+JUNUS FATAH NIK / LAKI-LAKI / PALEMBANG / PT Bank OCBC NISP Tbk /
+3172042208600007 097025183435000 22 Agustus 1960 10 Mei 2023
+Alamat Kelurahan Kecamatan Kabupaten / Kota Kode Pos Negara
+GADING GRIYA LESTARI G1 NO 12 RT 004 RW 009
+SUKAPURA CILINCING Wil. Kota Jakarta Utara 14140 Indonesia
+SUKAPURA, JAKARTA UTARA 14140
+Status Gelar
+Pekerjaan Tempat Bekerja Bidang Usaha
+Debitur
+Wiraswasta PT TOPAZ TALI LIMAS Industri Barang Logam Lainnya Ytdl Diploma 3
+Nama Sesuai Identitas Identitas Jenis Kelamin / NPWP Tempat / Tgl Lahir Pelapor / Tanggal Update
+JUNUS FATAH NIK / LAKI-LAKI / PALEMBANG / PT Pan Indonesia Bank Tbk /
+3172042208600007 097025183435000 22 Agustus 1960 10 Mei 2023
+Alamat Kelurahan Kecamatan Kabupaten / Kota Kode Pos Negara
+GD GRIYA LESTARI G1 NO 12 SUKAPURA JAKARTA ROROTAN CILINCING Wil. Kota Jakarta Utara 14140 Indonesia
+Status Gelar
+Pekerjaan Tempat Bekerja Bidang Usaha
+Debitur
+Lain-lain TOPAZ TALI LIMAS PT Industri Pengolahan Lainnya Tanpa Gelar
+Nama Sesuai Identitas Identitas Jenis Kelamin / NPWP Tempat / Tgl Lahir Pelapor / Tanggal Update
+JUNUS FATAH NIK / LAKI-LAKI / PALEMBANG / PT Bank Central Asia Tbk /
+3172042208600007 097025183435000 22 Agustus 1960 10 Mei 2023
+Alamat Kelurahan Kecamatan Kabupaten / Kota Kode Pos Negara
+GD.GRIYA LESTARI G1 12 RT.5/09KEL.SUKAPURA,JAKARTA
+ROROTAN CILINCING Wil. Kota Jakarta Utara 14140 Indonesia
+UTARA
+Status Gelar
+Pekerjaan Tempat Bekerja Bidang Usaha
+Debitur
+Wiraswasta PT TOPAZ TALI LIMAS Konstruksi Khusus Lainnya Ytdl Diploma 3
+Nama Sesuai Identitas Identitas Jenis Kelamin / NPWP Tempat / Tgl Lahir Pelapor / Tanggal Update
+JUNUS FATAH NIK / LAKI-LAKI / PALEMBANG / PT Bank Rakyat Indonesia (Persero) Tbk /
+3172042208600007 22 Agustus 1960 08 Juni 2023
+Alamat Kelurahan Kecamatan Kabupaten / Kota Kode Pos Negara
+GD GRIYA LESTARI G 1 NO 12 RT 04 RW 09 SUKAPURA RT04RW09SUKAPURA CILINCING Wil. Kota Jakarta Utara 14140 Indonesia
+Status Gelar
+Pekerjaan Tempat Bekerja Bidang Usaha
+Debitur
+Lain-lain TOPAZ TALI LIMAS PT Rumah Tangga Untuk Keperluan Multiguna Lainnya Tanpa Gelar
+Nama Sesuai Identitas Identitas Jenis Kelamin / NPWP Tempat / Tgl Lahir Pelapor / Tanggal Update
+JUNUS FATAH NIK / LAKI-LAKI / PALEMBANG / PT Bank Mandiri (Persero) Tbk /
+3172042208600007 097025183435000 22 Agustus 1960 09 Mei 2023
+Alamat Kelurahan Kecamatan Kabupaten / Kota Kode Pos Negara
+ALAMAT. GADING GRIYA NO. 1 RT. 004 RW. 009 LESTARI
+SUKAPURA JAKARTA CILINCING Wil. Kota Jakarta Utara 14140 Indonesia
+SUKAPURA JAKARTA
+Status Gelar
+Pekerjaan Tempat Bekerja Bidang Usaha
+Debitur
+Wiraswasta TOPAZTALILIMASPTPEMILIK Bukan Lapangan Usaha Lainnya Lainnya
+Nama Sesuai Identitas Identitas Jenis Kelamin / NPWP Tempat / Tgl Lahir Pelapor / Tanggal Update
+JUNUS FATAH NIK / LAKI-LAKI / PALEMBANG / PT Bank Danamon Indonesia Tbk /
+3172042208600007 22 Agustus 1960 09 Oktober 2017
+Alamat Kelurahan Kecamatan Kabupaten / Kota Kode Pos Negara
+DATA BELUM TERSEDIA DATA BELUM TERSEDIA DATA BELUM TERSEDIA Wil. Kota Jakarta Pusat 10110 Indonesia
+Nomor Laporan 41279/IDEB/0101523/2023 | Operator muliana | Tanggal Permintaan 09 Juni 2023 10.48.09 | Kode Ref. Pengguna LC2023060833_1
+Posisi data Terakhir Mei 2023 | LJK 523 - 004 | Peruntukan 01 | Tanggal Dibentuk 09 Juni 2023 10.48.09 halaman 1 dari 10
+Status Gelar
+Pekerjaan Tempat Bekerja Bidang Usaha
+Debitur
+Lain-lain NA Bukan Lapangan Usaha Lain Tanpa Gelar
+Ringkasan Fasilitas
+Kredit/Pembiayaan Irrevocable L/C Garansi Yang Diberikan Fasilitas Lain Total Kualitas Terburuk
+Fasilitas
+(dalam IDR) (dalam IDR) (dalam IDR) (dalam IDR) (dalam IDR) / Bulan Data
+Plafon Efektif 785.000.000,00 0,00 0,00 0,00 785.000.000,00 5 / November 2021
+Baki Debet 27.692.181,00 0,00 0,00 0,00 27.692.181,00
+Jumlah Kreditur Bank Umum 6 BPR / BPRS 0 Lembaga Pembiayaan 0 Lainnya 0
+Kredit/Pembiayaan
+Pelapor Cabang Baki Debet Tanggal Update
+011 - PT Bank Danamon Indonesia Tbk BDI KPO Rp 0,00 09 Oktober 2017
+Jun 21 Jul 21 Agt 21 Sep 21 Okt 21 Nov 21 Des 21 Jan 22 Feb 22 Mar 22 Apr 22 Mei 22
+Kualitas / Jumlah Hari
+Tunggakan
+Jun 22 Jul 22 Agt 22 Sep 22 Okt 22 Nov 22 Des 22 Jan 23 Feb 23 Mar 23 Apr 23 Mei 23
+No Rekening Kualitas 1 - Lancar
+Sifat Kredit/Pembiayaan Lainnya Jumlah Hari Tunggakan 0
+Jenis Kredit/Pembiayaan Kartu Kredit atau Kartu Pembiayaan Syariah Nilai Proyek Rp
+Akad Kredit/Pembiayaan Konvensional Plafon Awal Rp 90.000.000,00
+Frekuensi Perpanjangan Kredit/Pembiayaan 1 Plafon Rp 90.000.000,00
+No Akad Awal Realisasi/Pencairan Bulan Berjalan Rp 0,00
+Tanggal Akad Awal Nilai dalam Mata Uang Asal
+No Akad Akhir Sebab Macet
+Tanggal Akad Akhir Tanggal Macet
+Tanggal Awal Kredit 10 Oktober 2016 Tunggakan Pokok Rp 0,00
+Tanggal Mulai 10 Oktober 2016 Tunggakan Bunga Rp 0,00
+Tanggal Jatuh Tempo 31 Oktober 2020 Frekuensi Tunggakan 5
+Kategori Debitur Bukan Debitur Usaha Mikro, Kecil, dan Menengah Denda Rp 0,00
+Jenis Penggunaan Konsumsi Frekuensi Restrukturisasi 0
+Sektor Ekonomi Rumah Tangga untuk Keperluan Multiguna Lain Tanggal Restrukturisasi Akhir
+Kredit Program Pemerintah Kredit Bukan Program Pemerintah Cara Restrukturisasi
+Kab/Kota Lokasi Proyek Wil. Kota Jakarta Utara Kondisi Lunas
+Valuta IDR Tanggal Kondisi 31 Agustus 2017
+Suku Bunga/Imbalan 26,95% Jenis Suku Bunga/Imbalan Suku Bunga Fixed
+Keterangan
+Agunan
+Penjamin
+Kredit/Pembiayaan
+Pelapor Cabang Baki Debet Tanggal Update
+002 - PT Bank Rakyat Indonesia (Persero) Tbk BRI KAS KPO Rp 26.884.920,00 08 Juni 2023
+Jun 21 Jul 21 Agt 21 Sep 21 Okt 21 Nov 21 Des 21 Jan 22 Feb 22 Mar 22 Apr 22 Mei 22
+Kualitas / Jumlah Hari
+5 227 5 265 5 289 5 319 1 0 5 380 5 411 5 442 5 470 5 501 5 531 5 562
+Tunggakan
+Jun 22 Jul 22 Agt 22 Sep 22 Okt 22 Nov 22 Des 22 Jan 23 Feb 23 Mar 23 Apr 23 Mei 23
+5 592 5 623 5 654 5 684 5 715 5 745 5 776 5 807 5 835 5 866 5 896
+No Rekening Kualitas 5 - Macet
+Sifat Kredit/Pembiayaan Lainnya Jumlah Hari Tunggakan 927
+Jenis Kredit/Pembiayaan Kartu Kredit/ Kartu Pembiayaan Syariah Nilai Proyek Rp
+Akad Kredit/Pembiayaan Konvensional Plafon Awal Rp 150.000.000,00
+Nomor Laporan 41279/IDEB/0101523/2023 | Operator muliana | Tanggal Permintaan 09 Juni 2023 10.48.09 | Kode Ref. Pengguna LC2023060833_1
+Posisi data Terakhir Mei 2023 | LJK 523 - 004 | Peruntukan 01 | Tanggal Dibentuk 09 Juni 2023 10.48.09 halaman 2 dari 10
+Frekuensi Perpanjangan Kredit/Pembiayaan 0 Plafon Rp 150.000.000,00
+No Akad Awal Realisasi/Pencairan Bulan Berjalan Rp 0,00
+Tanggal Akad Awal Nilai dalam Mata Uang Asal
+No Akad Akhir Sebab Macet Lainnya
+Tanggal Akad Akhir Tanggal Macet 15 Mei 2021
+Tanggal Awal Kredit 20 Maret 2017 Tunggakan Pokok Rp 26.884.920,00
+Tanggal Mulai 20 Maret 2017 Tunggakan Bunga Rp 0,00
+Tanggal Jatuh Tempo 31 Maret 2023 Frekuensi Tunggakan 30
+Kategori Debitur Bukan Debitur Usaha Mikro, Kecil, dan Menengah Denda Rp 0,00
+Jenis Penggunaan Konsumsi Frekuensi Restrukturisasi 0
+Sektor Ekonomi Rumah Tangga Untuk Keperluan Multiguna Lainnya Tanggal Restrukturisasi Akhir
+Kredit yang bukan merupakan kredit/pembiayaan
+Kredit Program Pemerintah Cara Restrukturisasi
+dalam rangka program pemerintah
+Kab/Kota Lokasi Proyek Wil. Kota Jakarta Utara Kondisi Dihapusbukukan
+Valuta IDR Tanggal Kondisi 15 Mei 2021
+Suku Bunga/Imbalan 21% Jenis Suku Bunga/Imbalan Suku Bunga Fixed
+Keterangan
+Agunan
+Penjamin
+Kredit/Pembiayaan
+Pelapor Cabang Baki Debet Tanggal Update
+028 - PT Bank OCBC NISP Tbk BANK OCBC NISP KPO Rp 0,00 11 Desember 2021
+Jun 21 Jul 21 Agt 21 Sep 21 Okt 21 Nov 21 Des 21 Jan 22 Feb 22 Mar 22 Apr 22 Mei 22
+Kualitas / Jumlah Hari
+1 0 2 21 2 52 1 0 2 21 1 0
+Tunggakan
+Jun 22 Jul 22 Agt 22 Sep 22 Okt 22 Nov 22 Des 22 Jan 23 Feb 23 Mar 23 Apr 23 Mei 23
+No Rekening Kualitas 1 - Lancar
+Sifat Kredit/Pembiayaan Kredit atau Pembiayaan yang Direstrukturisasi Jumlah Hari Tunggakan 0
+Jenis Kredit/Pembiayaan Kredit atau Pembiayaan yang Diberikan Nilai Proyek Rp
+Akad Kredit/Pembiayaan Konvensional Plafon Awal Rp 578.141.316,00
+Frekuensi Perpanjangan Kredit/Pembiayaan 1 Plafon Rp 0,00
+No Akad Awal 02505PKA000483168a/LGL-ARM/I/JM/2021 Realisasi/Pencairan Bulan Berjalan Rp 0,00
+Tanggal Akad Awal 11 Januari 2021 Nilai dalam Mata Uang Asal
+No Akad Akhir 02505PKA000483168a/LGL-ARM/I/JM/2021-01 Sebab Macet
+Tanggal Akad Akhir 12 Januari 2021 Tanggal Macet
+Tanggal Awal Kredit 11 Januari 2021 Tunggakan Pokok Rp 0,00
+Tanggal Mulai 12 Januari 2021 Tunggakan Bunga Rp 0,00
+Tanggal Jatuh Tempo 11 Oktober 2021 Frekuensi Tunggakan 3
+Kategori Debitur Bukan Debitur Usaha Mikro, Kecil, dan Menengah Denda Rp 0,00
+Jenis Penggunaan Konsumsi Frekuensi Restrukturisasi 1
+Rumah Tangga Untuk Keperluan yang tidak
+Sektor Ekonomi Tanggal Restrukturisasi Akhir 28 Januari 2021
+diklasifikasikan di tempat lain
+Kredit Program Pemerintah Kredit Bukan Program Pemerintah Cara Restrukturisasi Lainnya
+Kab/Kota Lokasi Proyek Wil. Kota Jakarta Utara Kondisi Lunas
+Valuta IDR Tanggal Kondisi 17 November 2021
+Suku Bunga/Imbalan 11,5% Jenis Suku Bunga/Imbalan Suku Bunga Fixed
+Keterangan
+Agunan
+Penjamin
+Kredit/Pembiayaan
+Pelapor Cabang Baki Debet Tanggal Update
+Nomor Laporan 41279/IDEB/0101523/2023 | Operator muliana | Tanggal Permintaan 09 Juni 2023 10.48.09 | Kode Ref. Pengguna LC2023060833_1
+Posisi data Terakhir Mei 2023 | LJK 523 - 004 | Peruntukan 01 | Tanggal Dibentuk 09 Juni 2023 10.48.09 halaman 3 dari 10
+014 - PT Bank Central Asia Tbk BCA KANTOR PUSAT Rp 807.261,00 10 Mei 2023
+Jun 21 Jul 21 Agt 21 Sep 21 Okt 21 Nov 21 Des 21 Jan 22 Feb 22 Mar 22 Apr 22 Mei 22
+Kualitas / Jumlah Hari
+1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+Tunggakan
+Jun 22 Jul 22 Agt 22 Sep 22 Okt 22 Nov 22 Des 22 Jan 23 Feb 23 Mar 23 Apr 23 Mei 23
+1 0 1 0 1 0 1 0 1 0 1 0 1 0 2 12 1 0 2 12 1 0
+No Rekening Kualitas 1 - Lancar
+Sifat Kredit/Pembiayaan Lainnya Jumlah Hari Tunggakan 0
+Jenis Kredit/Pembiayaan Kartu Kredit/ Kartu Pembiayaan Syariah Nilai Proyek Rp
+Akad Kredit/Pembiayaan Konvensional Plafon Awal Rp 95.000.000,00
+Frekuensi Perpanjangan Kredit/Pembiayaan 3 Plafon Rp 95.000.000,00
+No Akad Awal 00000000063858922010 Realisasi/Pencairan Bulan Berjalan Rp 210.154,00
+Tanggal Akad Awal 06 April 2010 Nilai dalam Mata Uang Asal
+No Akad Akhir 00000000063858922010 Sebab Macet
+Tanggal Akad Akhir 06 April 2010 Tanggal Macet
+Tanggal Awal Kredit 06 April 2010 Tunggakan Pokok Rp 0,00
+Tanggal Mulai 01 Maret 2022 Tunggakan Bunga Rp 0,00
+Tanggal Jatuh Tempo 31 Maret 2026 Frekuensi Tunggakan 0
+Kategori Debitur Bukan Debitur Usaha Mikro, Kecil, dan Menengah Denda Rp 6.573,00
+Jenis Penggunaan Konsumsi Frekuensi Restrukturisasi 0
+Sektor Ekonomi Bukan Lapangan Usaha Lainnya Tanggal Restrukturisasi Akhir
+Kredit yang bukan merupakan kredit/pembiayaan
+Kredit Program Pemerintah Cara Restrukturisasi
+dalam rangka program pemerintah
+Kab/Kota Lokasi Proyek Wil. Kota Jakarta Utara Kondisi Fasilitas Aktif
+Valuta IDR Tanggal Kondisi
+Suku Bunga/Imbalan 1,75% Jenis Suku Bunga/Imbalan Suku Bunga Floating
+Keterangan
+Agunan
+Penjamin
+Kredit/Pembiayaan
+Pelapor Cabang Baki Debet Tanggal Update
+014 - PT Bank Central Asia Tbk BCA KANTOR PUSAT Rp 0,00 10 Mei 2023
+Jun 21 Jul 21 Agt 21 Sep 21 Okt 21 Nov 21 Des 21 Jan 22 Feb 22 Mar 22 Apr 22 Mei 22
+Kualitas / Jumlah Hari
+1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+Tunggakan
+Jun 22 Jul 22 Agt 22 Sep 22 Okt 22 Nov 22 Des 22 Jan 23 Feb 23 Mar 23 Apr 23 Mei 23
+1 0 1 0 1 0 1 0 1 0 1 0 1 0 2 0 1 0 2 0 1 0
+No Rekening Kualitas 1 - Lancar
+Sifat Kredit/Pembiayaan Lainnya Jumlah Hari Tunggakan 0
+Jenis Kredit/Pembiayaan Kartu Kredit/ Kartu Pembiayaan Syariah Nilai Proyek Rp 100.000.000,00
+Akad Kredit/Pembiayaan Konvensional Plafon Awal Rp 100.000.000,00
+Frekuensi Perpanjangan Kredit/Pembiayaan 3 Plafon Rp 100.000.000,00
+No Akad Awal 00000000096896202009 Realisasi/Pencairan Bulan Berjalan Rp 0,00
+Tanggal Akad Awal 08 Mei 2009 Nilai dalam Mata Uang Asal
+No Akad Akhir 00000000096896202009 Sebab Macet
+Tanggal Akad Akhir 08 Mei 2009 Tanggal Macet
+Tanggal Awal Kredit 08 Mei 2009 Tunggakan Pokok Rp 0,00
+Tanggal Mulai 01 April 2022 Tunggakan Bunga Rp 0,00
+Tanggal Jatuh Tempo 30 April 2026 Frekuensi Tunggakan 0
+Debitur Usaha Mikro, Kecil, dan Menengah ?
+Kategori Debitur Denda Rp 0,00
+Menengah
+Jenis Penggunaan Modal Kerja Frekuensi Restrukturisasi 0
+Sektor Ekonomi Konstruksi Khusus Lainnya Ytdl Tanggal Restrukturisasi Akhir
+Kredit yang bukan merupakan kredit/pembiayaan
+Kredit Program Pemerintah Cara Restrukturisasi
+dalam rangka program pemerintah
+Kab/Kota Lokasi Proyek Wil. Kota Jakarta Utara Kondisi Fasilitas Aktif
+Nomor Laporan 41279/IDEB/0101523/2023 | Operator muliana | Tanggal Permintaan 09 Juni 2023 10.48.09 | Kode Ref. Pengguna LC2023060833_1
+Posisi data Terakhir Mei 2023 | LJK 523 - 004 | Peruntukan 01 | Tanggal Dibentuk 09 Juni 2023 10.48.09 halaman 4 dari 10
+Valuta IDR Tanggal Kondisi
+Suku Bunga/Imbalan 1,75% Jenis Suku Bunga/Imbalan Suku Bunga Floating
+Keterangan
+Agunan
+Penjamin
+Kredit/Pembiayaan
+Pelapor Cabang Baki Debet Tanggal Update
+028 - PT Bank OCBC NISP Tbk BANK OCBC NISP KPO Rp 0,00 10 Mei 2023
+Jun 21 Jul 21 Agt 21 Sep 21 Okt 21 Nov 21 Des 21 Jan 22 Feb 22 Mar 22 Apr 22 Mei 22
+Kualitas / Jumlah Hari
+1 0 2 0 2 0 1 0 2 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+Tunggakan
+Jun 22 Jul 22 Agt 22 Sep 22 Okt 22 Nov 22 Des 22 Jan 23 Feb 23 Mar 23 Apr 23 Mei 23
+1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+No Rekening Kualitas 1 - Lancar
+Sifat Kredit/Pembiayaan Lainnya Jumlah Hari Tunggakan 0
+Jenis Kredit/Pembiayaan Kartu Kredit/ Kartu Pembiayaan Syariah Nilai Proyek Rp
+Akad Kredit/Pembiayaan Konvensional Plafon Awal Rp 100.000.000,00
+Frekuensi Perpanjangan Kredit/Pembiayaan 1 Plafon Rp 100.000.000,00
+No Akad Awal Realisasi/Pencairan Bulan Berjalan Rp 0,00
+Tanggal Akad Awal Nilai dalam Mata Uang Asal
+No Akad Akhir Sebab Macet
+Tanggal Akad Akhir Tanggal Macet
+Tanggal Awal Kredit 23 Februari 2016 Tunggakan Pokok Rp 0,00
+Tanggal Mulai 12 April 2021 Tunggakan Bunga Rp 0,00
+Tanggal Jatuh Tempo 01 Agustus 2024 Frekuensi Tunggakan 0
+Kategori Debitur Bukan Debitur Usaha Mikro, Kecil, dan Menengah Denda Rp 0,00
+Jenis Penggunaan Konsumsi Frekuensi Restrukturisasi 0
+Sektor Ekonomi Bukan Lapangan Usaha Lainnya Tanggal Restrukturisasi Akhir
+Kredit yang bukan merupakan kredit/pembiayaan
+Kredit Program Pemerintah Cara Restrukturisasi
+dalam rangka program pemerintah
+Kab/Kota Lokasi Proyek Wil. Kota Jakarta Utara Kondisi Fasilitas Aktif
+Valuta IDR Tanggal Kondisi
+Suku Bunga/Imbalan 21% Jenis Suku Bunga/Imbalan Suku Bunga Fixed
+Keterangan
+Agunan
+Penjamin
+Kredit/Pembiayaan
+Pelapor Cabang Baki Debet Tanggal Update
+028 - PT Bank OCBC NISP Tbk BANK OCBC NISP KPO Rp 0,00 18 Februari 2021
+Jun 21 Jul 21 Agt 21 Sep 21 Okt 21 Nov 21 Des 21 Jan 22 Feb 22 Mar 22 Apr 22 Mei 22
+Kualitas / Jumlah Hari
+Tunggakan
+Jun 22 Jul 22 Agt 22 Sep 22 Okt 22 Nov 22 Des 22 Jan 23 Feb 23 Mar 23 Apr 23 Mei 23
+No Rekening Kualitas 1 - Lancar
+Sifat Kredit/Pembiayaan Lainnya Jumlah Hari Tunggakan 0
+Jenis Kredit/Pembiayaan Kredit atau Pembiayaan yang Diberikan Nilai Proyek Rp
+Akad Kredit/Pembiayaan Konvensional Plafon Awal Rp 6.000.000.000,00
+Frekuensi Perpanjangan Kredit/Pembiayaan 0 Plafon Rp 0,00
+No Akad Awal 02505PKA00011712/11 FEBRUARI 2016 Realisasi/Pencairan Bulan Berjalan Rp 0,00
+Tanggal Akad Awal 11 Februari 2016 Nilai dalam Mata Uang Asal
+Nomor Laporan 41279/IDEB/0101523/2023 | Operator muliana | Tanggal Permintaan 09 Juni 2023 10.48.09 | Kode Ref. Pengguna LC2023060833_1
+Posisi data Terakhir Mei 2023 | LJK 523 - 004 | Peruntukan 01 | Tanggal Dibentuk 09 Juni 2023 10.48.09 halaman 5 dari 10
+No Akad Akhir 02505PKA00011712/11 FEBRUARI 2016 Sebab Macet
+Tanggal Akad Akhir 11 Februari 2016 Tanggal Macet
+Tanggal Awal Kredit 11 Februari 2016 Tunggakan Pokok Rp 0,00
+Tanggal Mulai 11 Februari 2016 Tunggakan Bunga Rp 0,00
+Tanggal Jatuh Tempo 11 Februari 2021 Frekuensi Tunggakan 1
+Kategori Debitur Bukan Debitur Usaha Mikro, Kecil, dan Menengah Denda Rp 0,00
+Jenis Penggunaan Konsumsi Frekuensi Restrukturisasi 0
+Sektor Ekonomi Rumah Tangga untuk Keperluan Multiguna Lain Tanggal Restrukturisasi Akhir
+Kredit Program Pemerintah Kredit Bukan Program Pemerintah Cara Restrukturisasi
+Kab/Kota Lokasi Proyek Wil. Kota Jakarta Utara Kondisi Lunas
+Valuta IDR Tanggal Kondisi 28 Januari 2021
+Suku Bunga/Imbalan 11,5% Jenis Suku Bunga/Imbalan Suku Bunga Fixed
+Keterangan
+Agunan
+Penjamin
+Kredit/Pembiayaan
+Pelapor Cabang Baki Debet Tanggal Update
+019 - PT Pan Indonesia Bank Tbk BANK PANIN KPO Rp 0,00 10 Mei 2023
+Jun 21 Jul 21 Agt 21 Sep 21 Okt 21 Nov 21 Des 21 Jan 22 Feb 22 Mar 22 Apr 22 Mei 22
+Kualitas / Jumlah Hari
+1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+Tunggakan
+Jun 22 Jul 22 Agt 22 Sep 22 Okt 22 Nov 22 Des 22 Jan 23 Feb 23 Mar 23 Apr 23 Mei 23
+1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+No Rekening Kualitas 1 - Lancar
+Sifat Kredit/Pembiayaan Lainnya Jumlah Hari Tunggakan 0
+Jenis Kredit/Pembiayaan Kartu Kredit/ Kartu Pembiayaan Syariah Nilai Proyek Rp
+Akad Kredit/Pembiayaan Konvensional Plafon Awal Rp 50.000.000,00
+Frekuensi Perpanjangan Kredit/Pembiayaan 0 Plafon Rp 50.000.000,00
+No Akad Awal Realisasi/Pencairan Bulan Berjalan Rp 0,00
+Tanggal Akad Awal Nilai dalam Mata Uang Asal
+No Akad Akhir Sebab Macet
+Tanggal Akad Akhir Tanggal Macet
+Tanggal Awal Kredit 02 Desember 2015 Tunggakan Pokok Rp 0,00
+Tanggal Mulai 02 Desember 2015 Tunggakan Bunga Rp 0,00
+Tanggal Jatuh Tempo 01 Desember 2024 Frekuensi Tunggakan 0
+Kategori Debitur Bukan Debitur Usaha Mikro, Kecil, dan Menengah Denda Rp 0,00
+Jenis Penggunaan Konsumsi Frekuensi Restrukturisasi 0
+Rumah Tangga Untuk Keperluan Yang Tidak
+Sektor Ekonomi Tanggal Restrukturisasi Akhir
+Diklasifikasikan Di Tempat Lain
+Kredit yang bukan merupakan kredit/pembiayaan
+Kredit Program Pemerintah Cara Restrukturisasi
+dalam rangka program pemerintah
+Kab/Kota Lokasi Proyek Wil. Kota Jakarta Utara Kondisi Fasilitas Aktif
+Valuta IDR Tanggal Kondisi
+Suku Bunga/Imbalan 21% Jenis Suku Bunga/Imbalan Suku Bunga Floating
+Keterangan
+Agunan
+Penjamin
+Kredit/Pembiayaan
+Pelapor Cabang Baki Debet Tanggal Update
+002 - PT Bank Rakyat Indonesia (Persero) Tbk BRI KAS KPO Rp 0,00 17 Februari 2022
+Jun 21 Jul 21 Agt 21 Sep 21 Okt 21 Nov 21 Des 21 Jan 22 Feb 22 Mar 22 Apr 22 Mei 22
+Nomor Laporan 41279/IDEB/0101523/2023 | Operator muliana | Tanggal Permintaan 09 Juni 2023 10.48.09 | Kode Ref. Pengguna LC2023060833_1
+Posisi data Terakhir Mei 2023 | LJK 523 - 004 | Peruntukan 01 | Tanggal Dibentuk 09 Juni 2023 10.48.09 halaman 6 dari 10
+Kualitas / Jumlah Hari
+1 0 1 0 1 0 1 0 1 0 5 380 5 411 1 0
+Tunggakan
+Jun 22 Jul 22 Agt 22 Sep 22 Okt 22 Nov 22 Des 22 Jan 23 Feb 23 Mar 23 Apr 23 Mei 23
+No Rekening Kualitas 1 - Lancar
+Sifat Kredit/Pembiayaan Lainnya Jumlah Hari Tunggakan 0
+Jenis Kredit/Pembiayaan Kartu Kredit/ Kartu Pembiayaan Syariah Nilai Proyek Rp
+Akad Kredit/Pembiayaan Konvensional Plafon Awal Rp 150.000.000,00
+Frekuensi Perpanjangan Kredit/Pembiayaan 0 Plafon Rp 150.000.000,00
+No Akad Awal Realisasi/Pencairan Bulan Berjalan Rp 0,00
+Tanggal Akad Awal Nilai dalam Mata Uang Asal
+No Akad Akhir Sebab Macet
+Tanggal Akad Akhir Tanggal Macet
+Tanggal Awal Kredit 12 Januari 2016 Tunggakan Pokok Rp 0,00
+Tanggal Mulai 12 Januari 2016 Tunggakan Bunga Rp 0,00
+Tanggal Jatuh Tempo 31 Januari 2022 Frekuensi Tunggakan 0
+Kategori Debitur Bukan Debitur Usaha Mikro, Kecil, dan Menengah Denda Rp 0,00
+Jenis Penggunaan Konsumsi Frekuensi Restrukturisasi 0
+Sektor Ekonomi Rumah Tangga Untuk Keperluan Multiguna Lainnya Tanggal Restrukturisasi Akhir
+Kredit yang bukan merupakan kredit/pembiayaan
+Kredit Program Pemerintah Cara Restrukturisasi
+dalam rangka program pemerintah
+Kab/Kota Lokasi Proyek Wil. Kota Jakarta Utara Kondisi Lunas
+Valuta IDR Tanggal Kondisi 31 Januari 2022
+Suku Bunga/Imbalan 21% Jenis Suku Bunga/Imbalan Suku Bunga Fixed
+Keterangan
+Agunan
+Penjamin
+Kredit/Pembiayaan
+Pelapor Cabang Baki Debet Tanggal Update
+014 - PT Bank Central Asia Tbk KC Kelapa Gading Rp 0,00 14 Oktober 2021
+Jun 21 Jul 21 Agt 21 Sep 21 Okt 21 Nov 21 Des 21 Jan 22 Feb 22 Mar 22 Apr 22 Mei 22
+Kualitas / Jumlah Hari
+1 0 1 6 1 38 1 0
+Tunggakan
+Jun 22 Jul 22 Agt 22 Sep 22 Okt 22 Nov 22 Des 22 Jan 23 Feb 23 Mar 23 Apr 23 Mei 23
+No Rekening Kualitas 1 - Lancar
+Sifat Kredit/Pembiayaan Lainnya Jumlah Hari Tunggakan 0
+Jenis Kredit/Pembiayaan Kredit atau Pembiayaan yang Diberikan Nilai Proyek Rp 2.500.000.000,00
+Akad Kredit/Pembiayaan Konvensional Plafon Awal Rp 2.500.000.000,00
+Frekuensi Perpanjangan Kredit/Pembiayaan 0 Plafon Rp 0,00
+No Akad Awal 8705-38 Realisasi/Pencairan Bulan Berjalan Rp 0,00
+Tanggal Akad Awal 24 September 2018 Nilai dalam Mata Uang Asal
+No Akad Akhir 8705-18-ADD Sebab Macet
+Tanggal Akad Akhir 18 Januari 2021 Tanggal Macet
+Tanggal Awal Kredit 24 September 2018 Tunggakan Pokok Rp 0,00
+Tanggal Mulai 24 September 2018 Tunggakan Bunga Rp 0,00
+Tanggal Jatuh Tempo 24 September 2023 Frekuensi Tunggakan 0
+Kategori Debitur Bukan Debitur Usaha Mikro, Kecil, dan Menengah Denda Rp 0,00
+Jenis Penggunaan Investasi Frekuensi Restrukturisasi 0
+Sektor Ekonomi Konstruksi Khusus Tanggal Restrukturisasi Akhir
+Kredit Program Pemerintah Kredit Bukan Program Pemerintah Cara Restrukturisasi
+Kab/Kota Lokasi Proyek Wil. Kota Jakarta Utara Kondisi Lunas
+Valuta IDR Tanggal Kondisi 16 September 2021
+Suku Bunga/Imbalan 7,08% Jenis Suku Bunga/Imbalan Suku Bunga Fixed
+Keterangan
+Nomor Laporan 41279/IDEB/0101523/2023 | Operator muliana | Tanggal Permintaan 09 Juni 2023 10.48.09 | Kode Ref. Pengguna LC2023060833_1
+Posisi data Terakhir Mei 2023 | LJK 523 - 004 | Peruntukan 01 | Tanggal Dibentuk 09 Juni 2023 10.48.09 halaman 7 dari 10
+Agunan
+Penjamin
+Kredit/Pembiayaan
+Pelapor Cabang Baki Debet Tanggal Update
+028 - PT Bank OCBC NISP Tbk BANK OCBC NISP KPO Rp 0,00 18 Agustus 2022
+Jun 21 Jul 21 Agt 21 Sep 21 Okt 21 Nov 21 Des 21 Jan 22 Feb 22 Mar 22 Apr 22 Mei 22
+Kualitas / Jumlah Hari
+1 0 2 4 2 35 1 0 2 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+Tunggakan
+Jun 22 Jul 22 Agt 22 Sep 22 Okt 22 Nov 22 Des 22 Jan 23 Feb 23 Mar 23 Apr 23 Mei 23
+1 0 1 0
+No Rekening Kualitas 1 - Lancar
+Sifat Kredit/Pembiayaan Lainnya Jumlah Hari Tunggakan 0
+Jenis Kredit/Pembiayaan Lainnya (Dengan Perjanjian) Nilai Proyek Rp
+Akad Kredit/Pembiayaan Konvensional Plafon Awal Rp 4.104.000.000,00
+Frekuensi Perpanjangan Kredit/Pembiayaan 0 Plafon Rp 0,00
+No Akad Awal 02397PKA000025407/CN/VII/2017 Realisasi/Pencairan Bulan Berjalan Rp 0,00
+Tanggal Akad Awal 28 Juli 2017 Nilai dalam Mata Uang Asal
+No Akad Akhir 02397PKA000025407/CN/VII/2017 Sebab Macet
+Tanggal Akad Akhir 28 Juli 2017 Tanggal Macet
+Tanggal Awal Kredit 28 Juli 2017 Tunggakan Pokok Rp 0,00
+Tanggal Mulai 28 Juli 2017 Tunggakan Bunga Rp 0,00
+Tanggal Jatuh Tempo 28 Juli 2022 Frekuensi Tunggakan 4
+Kategori Debitur Bukan Debitur Usaha Mikro, Kecil, dan Menengah Denda Rp 0,00
+Jenis Penggunaan Konsumsi Frekuensi Restrukturisasi 0
+Rumah Tangga Untuk Pemilikan Rumah Tinggal Tipe
+Sektor Ekonomi Tanggal Restrukturisasi Akhir
+Diatas 70
+Kredit yang bukan merupakan kredit/pembiayaan
+Kredit Program Pemerintah Cara Restrukturisasi
+dalam rangka program pemerintah
+Kab/Kota Lokasi Proyek Wil. Kota Jakarta Utara Kondisi Lunas
+Valuta IDR Tanggal Kondisi 28 Juli 2022
+Suku Bunga/Imbalan 9,5% Jenis Suku Bunga/Imbalan Suku Bunga Fixed
+Keterangan
+Agunan
+Penjamin
+Kredit/Pembiayaan
+Pelapor Cabang Baki Debet Tanggal Update
+014 - PT Bank Central Asia Tbk KC Kelapa Gading Rp 0,00 10 Agustus 2018
+Jun 21 Jul 21 Agt 21 Sep 21 Okt 21 Nov 21 Des 21 Jan 22 Feb 22 Mar 22 Apr 22 Mei 22
+Kualitas / Jumlah Hari
+Tunggakan
+Jun 22 Jul 22 Agt 22 Sep 22 Okt 22 Nov 22 Des 22 Jan 23 Feb 23 Mar 23 Apr 23 Mei 23
+No Rekening Kualitas 1 - Lancar
+Sifat Kredit/Pembiayaan Lainnya Jumlah Hari Tunggakan 0
+Jenis Kredit/Pembiayaan Kredit atau Pembiayaan yang Diberikan Nilai Proyek Rp
+Akad Kredit/Pembiayaan Konvensional Plafon Awal Rp 5.706.480.000,00
+Frekuensi Perpanjangan Kredit/Pembiayaan 0 Plafon Rp 0,00
+No Akad Awal 0065-51 Realisasi/Pencairan Bulan Berjalan Rp 0,00
+Tanggal Akad Awal 23 Juli 2013 Nilai dalam Mata Uang Asal
+No Akad Akhir 0065-51 Sebab Macet
+Tanggal Akad Akhir 23 Juli 2013 Tanggal Macet
+Tanggal Awal Kredit 23 Juli 2013 Tunggakan Pokok Rp 0,00
+Nomor Laporan 41279/IDEB/0101523/2023 | Operator muliana | Tanggal Permintaan 09 Juni 2023 10.48.09 | Kode Ref. Pengguna LC2023060833_1
+Posisi data Terakhir Mei 2023 | LJK 523 - 004 | Peruntukan 01 | Tanggal Dibentuk 09 Juni 2023 10.48.09 halaman 8 dari 10
+Tanggal Mulai 23 Juli 2013 Tunggakan Bunga Rp 0,00
+Tanggal Jatuh Tempo 23 Juli 2018 Frekuensi Tunggakan 0
+Kategori Debitur Bukan Debitur Usaha Mikro, Kecil, dan Menengah Denda Rp 0,00
+Jenis Penggunaan Konsumsi Frekuensi Restrukturisasi 0
+Rumah Tangga untuk Pemilikan Rumah Toko (Ruko)
+Sektor Ekonomi Tanggal Restrukturisasi Akhir
+atau Rumah Kantor (Rukan)
+Kredit Program Pemerintah Kredit Bukan Program Pemerintah Cara Restrukturisasi
+Kab/Kota Lokasi Proyek Wil. Kota Jakarta Utara Kondisi Lunas
+Valuta IDR Tanggal Kondisi 23 Juli 2018
+Suku Bunga/Imbalan 8,5% Jenis Suku Bunga/Imbalan Suku Bunga Fixed
+Keterangan
+Agunan
+Penjamin
+Kredit/Pembiayaan
+Pelapor Cabang Baki Debet Tanggal Update
+014 - PT Bank Central Asia Tbk KC Kelapa Gading Rp 0,00 14 Oktober 2021
+Jun 21 Jul 21 Agt 21 Sep 21 Okt 21 Nov 21 Des 21 Jan 22 Feb 22 Mar 22 Apr 22 Mei 22
+Kualitas / Jumlah Hari
+1 19 1 0 1 20 1 0
+Tunggakan
+Jun 22 Jul 22 Agt 22 Sep 22 Okt 22 Nov 22 Des 22 Jan 23 Feb 23 Mar 23 Apr 23 Mei 23
+No Rekening Kualitas 1 - Lancar
+Sifat Kredit/Pembiayaan Lainnya Jumlah Hari Tunggakan 0
+Jenis Kredit/Pembiayaan Kredit atau Pembiayaan yang Diberikan Nilai Proyek Rp 5.718.000.000,00
+Akad Kredit/Pembiayaan Konvensional Plafon Awal Rp 5.718.000.000,00
+Frekuensi Perpanjangan Kredit/Pembiayaan 0 Plafon Rp 0,00
+No Akad Awal 0065-15 Realisasi/Pencairan Bulan Berjalan Rp 0,00
+Tanggal Akad Awal 11 Juli 2017 Nilai dalam Mata Uang Asal
+No Akad Akhir 0065-17-ADD Sebab Macet
+Tanggal Akad Akhir 18 Januari 2021 Tanggal Macet
+Tanggal Awal Kredit 11 Juli 2017 Tunggakan Pokok Rp 0,00
+Tanggal Mulai 11 Juli 2017 Tunggakan Bunga Rp 0,00
+Tanggal Jatuh Tempo 11 Juli 2022 Frekuensi Tunggakan 0
+Kategori Debitur Bukan Debitur Usaha Mikro, Kecil, dan Menengah Denda Rp 0,00
+Jenis Penggunaan Investasi Frekuensi Restrukturisasi 0
+Sektor Ekonomi Konstruksi Khusus Tanggal Restrukturisasi Akhir
+Kredit Program Pemerintah Kredit Bukan Program Pemerintah Cara Restrukturisasi
+Kab/Kota Lokasi Proyek Wil. Kota Jakarta Utara Kondisi Lunas
+Valuta IDR Tanggal Kondisi 16 September 2021
+Suku Bunga/Imbalan 7,88% Jenis Suku Bunga/Imbalan Suku Bunga Fixed
+Keterangan
+Agunan
+Penjamin
+Kredit/Pembiayaan
+Pelapor Cabang Baki Debet Tanggal Update
+008 - PT Bank Mandiri (Persero) Tbk KPO Rp 0,00 09 Juli 2021
+Jun 21 Jul 21 Agt 21 Sep 21 Okt 21 Nov 21 Des 21 Jan 22 Feb 22 Mar 22 Apr 22 Mei 22
+Kualitas / Jumlah Hari
+1 0
+Tunggakan
+Jun 22 Jul 22 Agt 22 Sep 22 Okt 22 Nov 22 Des 22 Jan 23 Feb 23 Mar 23 Apr 23 Mei 23
+Nomor Laporan 41279/IDEB/0101523/2023 | Operator muliana | Tanggal Permintaan 09 Juni 2023 10.48.09 | Kode Ref. Pengguna LC2023060833_1
+Posisi data Terakhir Mei 2023 | LJK 523 - 004 | Peruntukan 01 | Tanggal Dibentuk 09 Juni 2023 10.48.09 halaman 9 dari 10
+No Rekening Kualitas 1 - Lancar
+Sifat Kredit/Pembiayaan Lainnya Jumlah Hari Tunggakan 0
+Jenis Kredit/Pembiayaan Kartu Kredit atau Kartu Pembiayaan Syariah Nilai Proyek Rp
+Akad Kredit/Pembiayaan Konvensional Plafon Awal Rp 50.000.000,00
+Frekuensi Perpanjangan Kredit/Pembiayaan 0 Plafon Rp 50.000.000,00
+No Akad Awal Realisasi/Pencairan Bulan Berjalan Rp 0,00
+Tanggal Akad Awal Nilai dalam Mata Uang Asal
+No Akad Akhir Sebab Macet
+Tanggal Akad Akhir Tanggal Macet
+Tanggal Awal Kredit 03 September 2014 Tunggakan Pokok Rp 0,00
+Tanggal Mulai 03 September 2014 Tunggakan Bunga Rp 0,00
+Tanggal Jatuh Tempo 31 Oktober 2024 Frekuensi Tunggakan 0
+Kategori Debitur Bukan Debitur Usaha Mikro, Kecil, dan Menengah Denda Rp 0,00
+Jenis Penggunaan Konsumsi Frekuensi Restrukturisasi 0
+Sektor Ekonomi Bukan Lapangan Usaha Lain Tanggal Restrukturisasi Akhir
+Kredit Program Pemerintah Kredit Bukan Program Pemerintah Cara Restrukturisasi
+Kab/Kota Lokasi Proyek Wil. Kota Jakarta Utara Kondisi Lunas
+Valuta IDR Tanggal Kondisi 30 Juni 2021
+Suku Bunga/Imbalan 2% Jenis Suku Bunga/Imbalan Suku Bunga Fixed
+Keterangan
+Agunan
+Penjamin
+Irrevocable L/C
+Garansi Yang Diberikan
+Surat Berharga
+Fasilitas Lain
+Nomor Laporan 41279/IDEB/0101523/2023 | Operator muliana | Tanggal Permintaan 09 Juni 2023 10.48.09 | Kode Ref. Pengguna LC2023060833_1
+Posisi data Terakhir Mei 2023 | LJK 523 - 004 | Peruntukan 01 | Tanggal Dibentuk 09 Juni 2023 10.48.09 halaman 10 dari 10
