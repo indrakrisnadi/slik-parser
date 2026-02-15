@@ -5,6 +5,7 @@ import shutil
 import os
 from openpyxl import Workbook
 from fastapi.responses import FileResponse
+import fitz  # PyMuPDF
 
 app = FastAPI()
 
@@ -141,11 +142,12 @@ async def upload_file(file: UploadFile = File(...)):
     contents = await file.read()
 
     full_text = ""
-    with pdfplumber.open(BytesIO(contents)) as pdf:
-        for page in pdf.pages:
-            text = page.extract_text()
-            if text:
-                full_text += "\n" + text
+doc = fitz.open(stream=contents, filetype="pdf")
+for page in doc:
+    text = page.get_text()
+    if text:
+        full_text += "\n" + text
+doc.close()
 
     parsed_data = parse_slik(full_text)
 
