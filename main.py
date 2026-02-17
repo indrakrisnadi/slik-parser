@@ -14,8 +14,17 @@ app = FastAPI()
 def parse_slik(text):
     facilities = []
 
-    nama_match = re.search(r"\n([A-Z\s]+)\s+LAKI-LAKI|PEREMPUAN", text)
-    nama_debitur = nama_match.group(1).strip() if nama_match else "Tidak Diketahui"
+nama_match = re.search(
+    r"(?<=\n)([A-Z][A-Z\s]{3,})\s+(?:LAKI-LAKI|PEREMPUAN)",
+    text
+)
+
+nama_debitur = (
+    nama_match.group(1).strip()
+    if nama_match and nama_match.group(1)
+    else "Tidak Diketahui"
+)
+
 
     pattern = r"\n\d{3}\s-\sPT\s.*?Tbk.*?(?=\n\d{3}\s-\sPT|\Z)"
     matches = re.finditer(pattern, text, re.DOTALL)
