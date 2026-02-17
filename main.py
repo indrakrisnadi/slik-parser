@@ -1,31 +1,23 @@
-import re
-from fastapi import FastAPI, UploadFile, File
-from fastapi.responses import StreamingResponse
-from openpyxl import Workbook
-from io import BytesIO
-import fitz  # PyMuPDF
-
-app = FastAPI()
-
-
-# ==============================
-# FUNCTION: PARSE SLIK
-# ==============================
 def parse_slik(text):
     facilities = []
 
-nama_match = re.search(
-    r"(?<=\n)([A-Z][A-Z\s]{3,})\s+(?:LAKI-LAKI|PEREMPUAN)",
-    text
-)
+    # ========================
+    # Ambil Nama Debitur
+    # ========================
+    nama_match = re.search(
+        r"\n([A-Z\s]+)\s+(?:LAKI-LAKI|PEREMPUAN)",
+        text
+    )
 
-nama_debitur = (
-    nama_match.group(1).strip()
-    if nama_match and nama_match.group(1)
-    else "Tidak Diketahui"
-)
+    nama_debitur = (
+        nama_match.group(1).strip()
+        if nama_match and nama_match.group(1)
+        else "Tidak Diketahui"
+    )
 
-
+    # ========================
+    # Split per fasilitas
+    # ========================
     pattern = r"\n\d{3}\s-\sPT\s.*?Tbk.*?(?=\n\d{3}\s-\sPT|\Z)"
     matches = re.finditer(pattern, text, re.DOTALL)
 
@@ -46,7 +38,8 @@ nama_debitur = (
 
         jenis_match = re.search(r"Jenis Kredit/Pembiayaan\s(.+)", block)
         if jenis_match:
-            jenis = re.sub(r"Nilai Proyek.*", "", jenis_match.group(1)).strip()
+            jenis = jenis_match.group(1).strip()
+            jenis = re.sub(r"Nilai Proyek.*", "", jenis).strip()
         else:
             jenis = ""
 
@@ -93,70 +86,3 @@ nama_debitur = (
         })
 
     return facilities
-
-
-# ==============================
-# UPLOAD ENDPOINT
-# ==============================
-@app.post("/upload/")
-async def upload_file(file: UploadFile = File(...)):
-
-    contents = await file.read()
-
-    # ===== EXTRACT PDF TEXT =====
-    full_text = ""
-    doc = fitz.open(stream=contents, filetype="pdf")
-
-    for page in doc:
-        text = page.get_text()
-        if text:
-            full_text += "\n" + text
-
-    doc.close()
-
-    parsed_data = parse_slik(full_text)
-
-    wb = Workbook()
-    ws = wb.active
-    ws.title = "SLIK Result"
-
-    headers = [
-        "Nama Debitur",
-        "Pelapor",
-        "Baki Debet",
-        "Kualitas",
-        "Jumlah Hari Tunggakan",
-        "Jenis Kredit",
-        "Jenis Penggunaan",
-        "Frekuensi Restrukturisasi",
-        "Tanggal Restrukturisasi Akhir",
-        "Kondisi",
-        "Suku Bunga"
-    ]
-
-    ws.append(headers)
-
-    for item in parsed_data:
-        ws.append([
-            item["Nama Debitur"],
-            item["Pelapor"],
-            item["Baki Debet"],
-            item["Kualitas"],
-            item["Jumlah Hari Tunggakan"],
-            item["Jenis Kredit"],
-            item["Jenis Penggunaan"],
-            item["Frekuensi Restrukturisasi"],
-            item["Tanggal Restrukturisasi Akhir"],
-            item["Kondisi"],
-            item["Suku Bunga"]
-        ])
-
-    excel_stream = BytesIO()
-    wb.save(excel_stream)
-    excel_stream.seek(0)
-
-    return StreamingResponse(
-        excel_stream,
-        media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-        headers={"Content-Disposition": "attachment; filename=hasil_slik.xlsx"}
-    )
