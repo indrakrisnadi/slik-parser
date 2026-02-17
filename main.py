@@ -1,28 +1,17 @@
-import re
-import fitz  # PyMuPDF
-from fastapi import FastAPI, UploadFile, File
-from fastapi.responses import JSONResponse
-
-app = FastAPI()
+from fastapi.responses import StreamingResponse
+from openpyxl import Workbook
+from io import BytesIO
+import fitz
 
 
-# ================================
-# ROOT CHECK
-# ================================
-@app.get("/")
-def root():
-    return {"status": "API hidup"}
-
-
-# ================================
-# UPLOAD FILE ENDPOINT
-# ================================
 @app.post("/upload/")
 async def upload_file(file: UploadFile = File(...)):
     try:
         content = await file.read()
 
-        # BUKA PDF
+        # ======================
+        # EXTRACT TEXT PDF
+        # ======================
         doc = fitz.open(stream=content, filetype="pdf")
 
         text = ""
@@ -31,20 +20,74 @@ async def upload_file(file: UploadFile = File(...)):
 
         doc.close()
 
-        # DEBUG
+        # DEBUG (boleh hapus nanti)
         print("===== TEXT PDF =====")
         print(text[:1000])
         print("===== END =====")
 
+        # ======================
+        # PARSE
+        # ======================
         data = parse_slik(text)
 
-        return JSONResponse(content=data)
+        # ======================
+        # BUAT EXCEL
+        # ======================
+        wb = Workbook()
+        ws = wb.active
+        ws.title = "SLIK Result"
+
+        headers = [
+            "Nama Debitur",
+            "Pelapor",
+            "Baki Debet",
+            "Kualitas",
+            "Jumlah Hari Tunggakan",
+            "Jenis Kredit",
+            "Jenis Penggunaan",
+            "Frekuensi Restrukturisasi",
+            "Tanggal Restrukturisasi Akhir",
+            "Kondisi",
+            "Suku Bunga"
+        ]
+        ws.append(headers)
+
+        for item in data:
+            ws.append([
+                item["Nama Debitur"],
+                item["Pelapor"],
+                item["Baki Debet"],
+                item["Kualitas"],
+                item["Jumlah Hari Tunggakan"],
+                item["Jenis Kredit"],
+                item["Jenis Penggunaan"],
+                item["Frekuensi Restrukturisasi"],
+                item["Tanggal Restrukturisasi Akhir"],
+                item["Kondisi"],
+                item["Suku Bunga"]
+            ])
+
+        # ======================
+        # STREAM FILE
+        # ======================
+        excel_stream = BytesIO()
+        wb.save(excel_stream)
+        excel_stream.seek(0)
+
+        return StreamingResponse(
+            excel_stream,
+            media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            headers={
+                "Content-Disposition": "attachment; filename=hasil_slik.xlsx"
+            }
+        )
 
     except Exception as e:
         return JSONResponse(
             status_code=500,
             content={"error": str(e)}
         )
+
 
 
 # ================================
