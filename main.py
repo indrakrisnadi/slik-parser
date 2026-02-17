@@ -1,6 +1,7 @@
+import re
+import fitz  # PyMuPDF
 from fastapi import FastAPI, UploadFile, File
 from fastapi.responses import JSONResponse
-import re
 
 app = FastAPI()
 
@@ -20,7 +21,20 @@ def root():
 async def upload_file(file: UploadFile = File(...)):
     try:
         content = await file.read()
-        text = content.decode("utf-8", errors="ignore")
+
+        # BUKA PDF
+        doc = fitz.open(stream=content, filetype="pdf")
+
+        text = ""
+        for page in doc:
+            text += page.get_text()
+
+        doc.close()
+
+        # DEBUG
+        print("===== TEXT PDF =====")
+        print(text[:1000])
+        print("===== END =====")
 
         data = parse_slik(text)
 
