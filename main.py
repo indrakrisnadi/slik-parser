@@ -6,7 +6,7 @@ from openpyxl import Workbook
 from io import BytesIO
 
 # ==============================
-# INIT FASTAPI (WAJIB PALING ATAS)
+# INIT FASTAPI
 # ==============================
 app = FastAPI()
 
@@ -14,18 +14,18 @@ app = FastAPI()
 # ==============================
 # FUNCTION PARSE SLIK
 # ==============================
-import re
-
 def parse_slik(text):
     facilities = []
 
     # =========================
-    # NORMALIZE TEXT
+    # NORMALIZE TEXT (SUPER PENTING)
     # =========================
     text = re.sub(r'\r', '', text)
+    text = re.sub(r'\s+\n', '\n', text)
+    text = re.sub(r'\n+', '\n', text)
 
     # =========================
-    # NAMA DEBITUR
+    # NAMA DEBITUR (MULTI FORMAT)
     # =========================
     nama_match = re.search(
         r"\n([A-Z\s]+)\s+(?:LAKI-LAKI|PEREMPUAN)",
@@ -42,47 +42,74 @@ def parse_slik(text):
     )
 
     # =========================
-    # BLOCK FASILITAS
+    # BLOCK FASILITAS (ANTI KEPUTUS HALAMAN)
     # =========================
-    pattern = r"\n\d{3}\s-\s.*?(?=\n\d{3}\s-\s|\Z)"
-    matches = re.finditer(pattern, text, re.DOTALL)
+    pattern = r"Kredit/Pembiayaan.*?(?=Kredit/Pembiayaan|\Z)"
+    matches = re.finditer(pattern, text, re.DOTALL | re.IGNORECASE)
 
     for match in matches:
         block = match.group()
 
+        # =========================
+        # PELAPOR (TIDAK DIUBAH SESUAI REQUEST)
+        # =========================
         pelapor_match = re.search(r"\d{3}\s-\s(.+)", block)
         pelapor = (
             pelapor_match.group(1).split("\n")[0].strip()
             if pelapor_match else ""
         )
 
+        # =========================
+        # BAKI DEBET
+        # =========================
         baki_match = re.search(r"Rp\s?[\d\.,]+", block)
         baki = baki_match.group().strip() if baki_match else ""
 
+        # =========================
+        # KUALITAS
+        # =========================
         kualitas_match = re.search(r"Kualitas\s([1-5]\s-\s.*)", block)
         kualitas = kualitas_match.group(1).strip() if kualitas_match else ""
 
+        # =========================
+        # TUNGGAKAN
+        # =========================
         tunggakan_match = re.search(r"Jumlah Hari Tunggakan\s(\d+)", block)
         tunggakan = tunggakan_match.group(1).strip() if tunggakan_match else "0"
 
+        # =========================
+        # JENIS KREDIT
+        # =========================
         jenis_match = re.search(r"Jenis Kredit/Pembiayaan\s(.+)", block)
         jenis = jenis_match.group(1).strip() if jenis_match else ""
 
+        # =========================
+        # PENGGUNAAN
+        # =========================
         penggunaan_match = re.search(
             r"Jenis Penggunaan\s(Konsumsi|Modal Kerja|Investasi)",
             block
         )
         penggunaan = penggunaan_match.group(1).strip() if penggunaan_match else ""
 
+        # =========================
+        # FREKUENSI RESTRUK
+        # =========================
         freq_match = re.search(r"Frekuensi Restrukturisasi\s(\d+)", block)
         frekuensi = freq_match.group(1).strip() if freq_match else ""
 
+        # =========================
+        # TANGGAL RESTRUK AKHIR
+        # =========================
         tgl_match = re.search(
             r"Tanggal Restrukturisasi Akhir\s(\d{1,2}\s\w+\s\d{4})",
             block
         )
         tanggal_restruktur = tgl_match.group(1).strip() if tgl_match else ""
 
+        # =========================
+        # KONDISI
+        # =========================
         kondisi_match = re.search(r"Kondisi\s(.+)", block)
         raw_kondisi = kondisi_match.group(1).strip() if kondisi_match else ""
 
@@ -93,9 +120,15 @@ def parse_slik(text):
         else:
             kondisi = raw_kondisi
 
+        # =========================
+        # SUKU BUNGA
+        # =========================
         bunga_match = re.search(r"Suku Bunga/Imbalan\s([\d\,\.]+%)", block)
         bunga = bunga_match.group(1).strip() if bunga_match else ""
 
+        # =========================
+        # APPEND
+        # =========================
         facilities.append({
             "Nama Debitur": nama_debitur,
             "Pelapor": pelapor,
@@ -129,11 +162,12 @@ async def upload_file(file: UploadFile = File(...)):
     try:
         content = await file.read()
 
-        # ========= EXTRACT TEXT PDF =========
+        # ========= EXTRACT PDF TEXT (MERGE HALAMAN KUAT) =========
         doc = fitz.open(stream=content, filetype="pdf")
 
         text = ""
         for page in doc:
+            text += "\n===PAGE_BREAK===\n"
             text += page.get_text()
 
         doc.close()
