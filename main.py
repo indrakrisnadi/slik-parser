@@ -1,104 +1,22 @@
-from fastapi.responses import StreamingResponse
+import re
+import fitz
+from fastapi import FastAPI, UploadFile, File
+from fastapi.responses import StreamingResponse, JSONResponse
 from openpyxl import Workbook
 from io import BytesIO
-import fitz
+
+# ==============================
+# INIT FASTAPI (WAJIB PALING ATAS)
+# ==============================
+app = FastAPI()
 
 
-@app.post("/upload/")
-async def upload_file(file: UploadFile = File(...)):
-    try:
-        content = await file.read()
-
-        # ======================
-        # EXTRACT TEXT PDF
-        # ======================
-        doc = fitz.open(stream=content, filetype="pdf")
-
-        text = ""
-        for page in doc:
-            text += page.get_text()
-
-        doc.close()
-
-        # DEBUG (boleh hapus nanti)
-        print("===== TEXT PDF =====")
-        print(text[:1000])
-        print("===== END =====")
-
-        # ======================
-        # PARSE
-        # ======================
-        data = parse_slik(text)
-
-        # ======================
-        # BUAT EXCEL
-        # ======================
-        wb = Workbook()
-        ws = wb.active
-        ws.title = "SLIK Result"
-
-        headers = [
-            "Nama Debitur",
-            "Pelapor",
-            "Baki Debet",
-            "Kualitas",
-            "Jumlah Hari Tunggakan",
-            "Jenis Kredit",
-            "Jenis Penggunaan",
-            "Frekuensi Restrukturisasi",
-            "Tanggal Restrukturisasi Akhir",
-            "Kondisi",
-            "Suku Bunga"
-        ]
-        ws.append(headers)
-
-        for item in data:
-            ws.append([
-                item["Nama Debitur"],
-                item["Pelapor"],
-                item["Baki Debet"],
-                item["Kualitas"],
-                item["Jumlah Hari Tunggakan"],
-                item["Jenis Kredit"],
-                item["Jenis Penggunaan"],
-                item["Frekuensi Restrukturisasi"],
-                item["Tanggal Restrukturisasi Akhir"],
-                item["Kondisi"],
-                item["Suku Bunga"]
-            ])
-
-        # ======================
-        # STREAM FILE
-        # ======================
-        excel_stream = BytesIO()
-        wb.save(excel_stream)
-        excel_stream.seek(0)
-
-        return StreamingResponse(
-            excel_stream,
-            media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-            headers={
-                "Content-Disposition": "attachment; filename=hasil_slik.xlsx"
-            }
-        )
-
-    except Exception as e:
-        return JSONResponse(
-            status_code=500,
-            content={"error": str(e)}
-        )
-
-
-
-# ================================
-# PARSER SLIK
-# ================================
+# ==============================
+# FUNCTION PARSE SLIK
+# ==============================
 def parse_slik(text):
     facilities = []
 
-    # ========================
-    # Ambil Nama Debitur
-    # ========================
     nama_match = re.search(
         r"\n([A-Z\s]+)\s+(?:LAKI-LAKI|PEREMPUAN)",
         text
@@ -110,9 +28,6 @@ def parse_slik(text):
         else "Tidak Diketahui"
     )
 
-    # ========================
-    # Split per fasilitas
-    # ========================
     pattern = r"\n\d{3}\s-\sPT\s.*?Tbk.*?(?=\n\d{3}\s-\sPT|\Z)"
     matches = re.finditer(pattern, text, re.DOTALL)
 
@@ -133,8 +48,7 @@ def parse_slik(text):
 
         jenis_match = re.search(r"Jenis Kredit/Pembiayaan\s(.+)", block)
         if jenis_match:
-            jenis = jenis_match.group(1).strip()
-            jenis = re.sub(r"Nilai Proyek.*", "", jenis).strip()
+            jenis = re.sub(r"Nilai Proyek.*", "", jenis_match.group(1)).strip()
         else:
             jenis = ""
 
@@ -181,3 +95,74 @@ def parse_slik(text):
         })
 
     return facilities
+
+
+# ==============================
+# ROOT TEST
+# ==============================
+@app.get("/")
+def root():
+    return {"status": "SLIK parser running"}
+
+
+# ==============================
+# UPLOAD PDF → DOWNLOAD EXCEL
+# ==============================
+@app.post("/upload/")
+async def upload_file(file: UploadFile = File(...)):
+    try:
+        content = await file.read()
+
+        # ========= EXTRACT TEXT PDF =========
+        doc = fitz.open(stream=content, filetype="pdf")
+
+        text = ""
+        for page in doc:
+            text += page.get_text()
+
+        doc.close()
+
+        print("===== PDF TEXT SAMPLE =====")
+        print(text[:1000])
+        print("===== END =====")
+
+        # ========= PARSE =========
+        data = parse_slik(text)
+
+        # ========= CREATE EXCEL =========
+        wb = Workbook()
+        ws = wb.active
+        ws.title = "SLIK Result"
+
+        headers = list(data[0].keys()) if data else [
+            "Nama Debitur",
+            "Pelapor",
+            "Baki Debet",
+            "Kualitas",
+            "Jumlah Hari Tunggakan",
+            "Jenis Kredit",
+            "Jenis Penggunaan",
+            "Frekuensi Restrukturisasi",
+            "Tanggal Restrukturisasi Akhir",
+            "Kondisi",
+            "Suku Bunga"
+        ]
+        ws.append(headers)
+
+        for row in data:
+            ws.append(list(row.values()))
+
+        stream = BytesIO()
+        wb.save(stream)
+        stream.seek(0)
+
+        return StreamingResponse(
+            stream,
+            media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            headers={
+                "Content-Disposition": "attachment; filename=hasil_slik.xlsx"
+            }
+        )
+
+    except Exception as e:
+        return JSONResponse(status_code=500, content={"error": str(e)})
