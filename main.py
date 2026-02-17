@@ -1,3 +1,41 @@
+from fastapi import FastAPI, UploadFile, File
+from fastapi.responses import JSONResponse
+import re
+
+app = FastAPI()
+
+
+# ================================
+# ROOT CHECK
+# ================================
+@app.get("/")
+def root():
+    return {"status": "API hidup"}
+
+
+# ================================
+# UPLOAD FILE ENDPOINT
+# ================================
+@app.post("/upload/")
+async def upload_file(file: UploadFile = File(...)):
+    try:
+        content = await file.read()
+        text = content.decode("utf-8", errors="ignore")
+
+        data = parse_slik(text)
+
+        return JSONResponse(content=data)
+
+    except Exception as e:
+        return JSONResponse(
+            status_code=500,
+            content={"error": str(e)}
+        )
+
+
+# ================================
+# PARSER SLIK
+# ================================
 def parse_slik(text):
     facilities = []
 
