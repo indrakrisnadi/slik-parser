@@ -14,13 +14,26 @@ app = FastAPI()
 # ==============================
 # FUNCTION PARSE SLIK
 # ==============================
+import re
+
 def parse_slik(text):
     facilities = []
 
+    # =========================
+    # NORMALIZE TEXT
+    # =========================
+    text = re.sub(r'\r', '', text)
+
+    # =========================
+    # NAMA DEBITUR
+    # =========================
     nama_match = re.search(
         r"\n([A-Z\s]+)\s+(?:LAKI-LAKI|PEREMPUAN)",
         text
     )
+
+    if not nama_match:
+        nama_match = re.search(r"Nama Debitur\s*:\s*(.+)", text)
 
     nama_debitur = (
         nama_match.group(1).strip()
@@ -28,16 +41,22 @@ def parse_slik(text):
         else "Tidak Diketahui"
     )
 
-    pattern = r"\n\d{3}\s-\sPT\s.*?Tbk.*?(?=\n\d{3}\s-\sPT|\Z)"
+    # =========================
+    # BLOCK FASILITAS
+    # =========================
+    pattern = r"\n\d{3}\s-\s.*?(?=\n\d{3}\s-\s|\Z)"
     matches = re.finditer(pattern, text, re.DOTALL)
 
     for match in matches:
         block = match.group()
 
-        pelapor_match = re.search(r"\d{3}\s-\s(PT.*?Tbk)", block)
-        pelapor = pelapor_match.group(1).strip() if pelapor_match else ""
+        pelapor_match = re.search(r"\d{3}\s-\s(.+)", block)
+        pelapor = (
+            pelapor_match.group(1).split("\n")[0].strip()
+            if pelapor_match else ""
+        )
 
-        baki_match = re.search(r"Rp\s[\d\.,]+", block)
+        baki_match = re.search(r"Rp\s?[\d\.,]+", block)
         baki = baki_match.group().strip() if baki_match else ""
 
         kualitas_match = re.search(r"Kualitas\s([1-5]\s-\s.*)", block)
@@ -47,10 +66,7 @@ def parse_slik(text):
         tunggakan = tunggakan_match.group(1).strip() if tunggakan_match else "0"
 
         jenis_match = re.search(r"Jenis Kredit/Pembiayaan\s(.+)", block)
-        if jenis_match:
-            jenis = re.sub(r"Nilai Proyek.*", "", jenis_match.group(1)).strip()
-        else:
-            jenis = ""
+        jenis = jenis_match.group(1).strip() if jenis_match else ""
 
         penggunaan_match = re.search(
             r"Jenis Penggunaan\s(Konsumsi|Modal Kerja|Investasi)",
@@ -70,12 +86,12 @@ def parse_slik(text):
         kondisi_match = re.search(r"Kondisi\s(.+)", block)
         raw_kondisi = kondisi_match.group(1).strip() if kondisi_match else ""
 
-        if "Fasilitas Aktif" in raw_kondisi:
+        if re.search(r"Aktif|Lancar|Berjalan", raw_kondisi, re.I):
             kondisi = "Fasilitas Aktif"
-        elif "Dihapusbukukan" in raw_kondisi:
+        elif re.search(r"Hapus|Write Off|Closed|Selesai", raw_kondisi, re.I):
             kondisi = "Dihapusbukukan"
         else:
-            continue
+            kondisi = raw_kondisi
 
         bunga_match = re.search(r"Suku Bunga/Imbalan\s([\d\,\.]+%)", block)
         bunga = bunga_match.group(1).strip() if bunga_match else ""
