@@ -11,124 +11,151 @@ from io import BytesIO
 app = FastAPI()
 
 
-# ==============================
-# FUNCTION PARSE SLIK
-# ==============================
-def parse_slik(text):
+import re
+import pdfplumber
+import pandas as pd
+
+
+# =====================================================
+# EXTRACT TEXT PDF
+# =====================================================
+def extract_text_from_pdf(file_path):
+    text = ""
+
+    with pdfplumber.open(file_path) as pdf:
+        for page in pdf.pages:
+            t = page.extract_text()
+            if t:
+                text += "\n" + t
+
+    return text
+
+
+# =====================================================
+# AMBIL NAMA DEBITUR (DARI DATA POKOK DEBITUR)
+# =====================================================
+def extract_nama_debitur(text):
+    match = re.search(
+        r"Nama Sesuai Identitas\s*\n?\s*([A-Z\s'.-]+)",
+        text,
+        re.IGNORECASE
+    )
+
+    if match:
+        return match.group(1).strip()
+
+    return "Tidak Diketahui"
+
+
+# =====================================================
+# NORMALISASI STATUS FASILITAS
+# =====================================================
+def normalize_kondisi(text):
+    if not text:
+        return None
+
+    t = text.lower()
+
+    if "aktif" in t:
+        return "Fasilitas Aktif"
+
+    if "hapus" in t:
+        return "Dihapusbukukan"
+
+    return None   # selain ini diabaikan
+
+
+# =====================================================
+# PARSE SLIK
+# =====================================================
+def parse_slik(full_text):
     facilities = []
 
-    # =========================
-    # NORMALIZE TEXT (SUPER PENTING)
-    # =========================
-    text = re.sub(r'\r', '', text)
-    text = re.sub(r'\s+\n', '\n', text)
-    text = re.sub(r'\n+', '\n', text)
+    nama_debitur = extract_nama_debitur(full_text)
 
-    # =========================
-    # NAMA DEBITUR (MULTI FORMAT)
-    # =========================
-    nama_match = re.search(
-        r"\n([A-Z\s]+)\s+(?:LAKI-LAKI|PEREMPUAN)",
-        text
-    )
+    # split blok fasilitas (lebih stabil)
+    blocks = re.split(r"\n\d{3}\s-\sPT", full_text)
 
-    if not nama_match:
-        nama_match = re.search(r"Nama Debitur\s*:\s*(.+)", text)
+    for block in blocks:
 
-    nama_debitur = (
-        nama_match.group(1).strip()
-        if nama_match and nama_match.group(1)
-        else "Tidak Diketahui"
-    )
+        if "Tbk" not in block:
+            continue
 
-    # =========================
-    # BLOCK FASILITAS (ANTI KEPUTUS HALAMAN)
-    # =========================
-    pattern = r"Kredit/Pembiayaan.*?(?=Kredit/Pembiayaan|\Z)"
-    matches = re.finditer(pattern, text, re.DOTALL | re.IGNORECASE)
+        block = "PT " + block
 
-    for match in matches:
-        block = match.group()
+        # -----------------------------
+        # pelapor
+        # -----------------------------
+        pelapor_match = re.search(r"(PT.*?Tbk)", block)
+        pelapor = pelapor_match.group(1).strip() if pelapor_match else ""
 
-        # =========================
-        # PELAPOR (TIDAK DIUBAH SESUAI REQUEST)
-        # =========================
-        pelapor_match = re.search(r"\d{3}\s-\s(.+)", block)
-        pelapor = (
-            pelapor_match.group(1).split("\n")[0].strip()
-            if pelapor_match else ""
-        )
-
-        # =========================
-        # BAKI DEBET
-        # =========================
+        # -----------------------------
+        # baki debet
+        # -----------------------------
         baki_match = re.search(r"Rp\s?[\d\.,]+", block)
         baki = baki_match.group().strip() if baki_match else ""
 
-        # =========================
-        # KUALITAS
-        # =========================
+        # -----------------------------
+        # kualitas
+        # -----------------------------
         kualitas_match = re.search(r"Kualitas\s([1-5]\s-\s.*)", block)
         kualitas = kualitas_match.group(1).strip() if kualitas_match else ""
 
-        # =========================
-        # TUNGGAKAN
-        # =========================
+        # -----------------------------
+        # tunggakan
+        # -----------------------------
         tunggakan_match = re.search(r"Jumlah Hari Tunggakan\s(\d+)", block)
-        tunggakan = tunggakan_match.group(1).strip() if tunggakan_match else "0"
+        tunggakan = tunggakan_match.group(1) if tunggakan_match else "0"
 
-        # =========================
-        # JENIS KREDIT
-        # =========================
+        # -----------------------------
+        # jenis kredit
+        # -----------------------------
         jenis_match = re.search(r"Jenis Kredit/Pembiayaan\s(.+)", block)
-        jenis = jenis_match.group(1).strip() if jenis_match else ""
+        if jenis_match:
+            jenis = re.sub(r"Nilai Proyek.*", "", jenis_match.group(1)).strip()
+        else:
+            jenis = ""
 
-        # =========================
-        # PENGGUNAAN
-        # =========================
+        # -----------------------------
+        # penggunaan
+        # -----------------------------
         penggunaan_match = re.search(
             r"Jenis Penggunaan\s(Konsumsi|Modal Kerja|Investasi)",
             block
         )
-        penggunaan = penggunaan_match.group(1).strip() if penggunaan_match else ""
+        penggunaan = penggunaan_match.group(1) if penggunaan_match else ""
 
-        # =========================
-        # FREKUENSI RESTRUK
-        # =========================
+        # -----------------------------
+        # restruktur
+        # -----------------------------
         freq_match = re.search(r"Frekuensi Restrukturisasi\s(\d+)", block)
-        frekuensi = freq_match.group(1).strip() if freq_match else ""
+        frekuensi = freq_match.group(1) if freq_match else ""
 
-        # =========================
-        # TANGGAL RESTRUK AKHIR
-        # =========================
         tgl_match = re.search(
             r"Tanggal Restrukturisasi Akhir\s(\d{1,2}\s\w+\s\d{4})",
             block
         )
-        tanggal_restruktur = tgl_match.group(1).strip() if tgl_match else ""
+        tanggal_restruktur = tgl_match.group(1) if tgl_match else ""
 
-        # =========================
-        # KONDISI
-        # =========================
+        # -----------------------------
+        # kondisi (FILTER PENTING)
+        # -----------------------------
         kondisi_match = re.search(r"Kondisi\s(.+)", block)
-        raw_kondisi = kondisi_match.group(1).strip() if kondisi_match else ""
+        kondisi_raw = kondisi_match.group(1).strip() if kondisi_match else ""
+        kondisi = normalize_kondisi(kondisi_raw)
 
-        if re.search(r"Aktif|Lancar|Berjalan", raw_kondisi, re.I):
-            kondisi = "Fasilitas Aktif"
-        elif re.search(r"Hapus|Write Off|Closed|Selesai", raw_kondisi, re.I):
-            kondisi = "Dihapusbukukan"
-        else:
-            kondisi = raw_kondisi
+        if not kondisi:
+            continue
 
-        # =========================
-        # SUKU BUNGA
-        # =========================
+        # -----------------------------
+        # bunga
+        # -----------------------------
         bunga_match = re.search(r"Suku Bunga/Imbalan\s([\d\,\.]+%)", block)
-        bunga = bunga_match.group(1).strip() if bunga_match else ""
+        bunga = bunga_match.group(1) if bunga_match else ""
 
-        # =========================
-        # APPEND
-        # =========================
+        # -----------------------------
+        # save
+        # -----------------------------
         facilities.append({
             "Nama Debitur": nama_debitur,
             "Pelapor": pelapor,
@@ -146,73 +173,30 @@ def parse_slik(text):
     return facilities
 
 
-# ==============================
-# ROOT TEST
-# ==============================
-@app.get("/")
-def root():
-    return {"status": "SLIK parser running"}
+# =====================================================
+# EXPORT EXCEL
+# =====================================================
+def export_to_excel(data, output_file):
+    df = pd.DataFrame(data)
+    df.to_excel(output_file, index=False)
 
 
-# ==============================
-# UPLOAD PDF → DOWNLOAD EXCEL
-# ==============================
-@app.post("/upload/")
-async def upload_file(file: UploadFile = File(...)):
-    try:
-        content = await file.read()
+# =====================================================
+# MAIN
+# =====================================================
+if __name__ == "__main__":
 
-        # ========= EXTRACT PDF TEXT (MERGE HALAMAN KUAT) =========
-        doc = fitz.open(stream=content, filetype="pdf")
+    pdf_file = "slik.pdf"          # ganti path
+    output_excel = "hasil_slik.xlsx"
 
-        text = ""
-        for page in doc:
-            text += "\n===PAGE_BREAK===\n"
-            text += page.get_text()
+    print("Reading PDF...")
+    text = extract_text_from_pdf(pdf_file)
 
-        doc.close()
+    print("Parsing SLIK...")
+    data = parse_slik(text)
 
-        print("===== PDF TEXT SAMPLE =====")
-        print(text[:1000])
-        print("===== END =====")
+    print("Exporting Excel...")
+    export_to_excel(data, output_excel)
 
-        # ========= PARSE =========
-        data = parse_slik(text)
-
-        # ========= CREATE EXCEL =========
-        wb = Workbook()
-        ws = wb.active
-        ws.title = "SLIK Result"
-
-        headers = list(data[0].keys()) if data else [
-            "Nama Debitur",
-            "Pelapor",
-            "Baki Debet",
-            "Kualitas",
-            "Jumlah Hari Tunggakan",
-            "Jenis Kredit",
-            "Jenis Penggunaan",
-            "Frekuensi Restrukturisasi",
-            "Tanggal Restrukturisasi Akhir",
-            "Kondisi",
-            "Suku Bunga"
-        ]
-        ws.append(headers)
-
-        for row in data:
-            ws.append(list(row.values()))
-
-        stream = BytesIO()
-        wb.save(stream)
-        stream.seek(0)
-
-        return StreamingResponse(
-            stream,
-            media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-            headers={
-                "Content-Disposition": "attachment; filename=hasil_slik.xlsx"
-            }
-        )
-
-    except Exception as e:
-        return JSONResponse(status_code=500, content={"error": str(e)})
+    print("DONE ✔")
+    print("Total fasilitas:", len(data))
